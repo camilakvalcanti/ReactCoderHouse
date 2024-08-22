@@ -1,16 +1,21 @@
 import React from 'react';
 
+
 interface NavBarProps {
     
-    buttonNames: string;
-    
+    buttonNames?: string;
+    url?: string;    
 }
 
-const NavBar = ({buttonNames}: NavBarProps) => {
+const NavBar = ({buttonNames,url}: NavBarProps) => {
 
     return (
         <div>
             <button>{buttonNames}</button>
+            <img
+            className='image'
+            src={url}
+            />
         </div>
     );
 };
