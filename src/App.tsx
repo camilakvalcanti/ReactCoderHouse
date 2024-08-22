@@ -6,6 +6,12 @@ import { FaCartPlus } from "react-icons/fa";
 
 const App = () => {
 
+  const ItemListContainer = () => {
+    return (
+      <h2>Minha lista de itens da loja!</h2>
+    );
+  };
+
   return (
     <div>
       <h1>Anime Store</h1>
@@ -13,6 +19,7 @@ const App = () => {
       <NavBar buttonNames='About us'/>
       <NavBar buttonNames='Our products'/>
       <NavBar buttonNames='Login'/>
+      <ItemListContainer/>
       <button type='button'>
         <FaCartPlus />
       </button>
