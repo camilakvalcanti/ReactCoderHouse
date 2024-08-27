@@ -9,6 +9,7 @@ interface NavBarProps {
 
 const NavBar = ({buttonNames,url}: NavBarProps) => {
 
+
     return (
         <div>
             <button>{buttonNames}</button>

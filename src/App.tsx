@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import NavBar from './components/navBar';
 import { FaCartPlus } from "react-icons/fa";
+import ItemCount from './components/navBar/ItemCount';
 
 const App = () => {
 
@@ -11,6 +12,10 @@ const App = () => {
       <h2>Minha lista de itens da loja!</h2>
     );
   };
+
+  const handleAddToCart = (quantity: number) => {
+    console.log('Added ${quantity} items to the cart');
+  }
 
   return (
     <div>
@@ -23,6 +28,7 @@ const App = () => {
       <button type='button'>
         <FaCartPlus />
       </button>
+      <ItemCount initial={1} stock={10} onAdd={handleAddToCart} />
     </div>
   );
 }; 
