@@ -4,14 +4,9 @@ import './App.css';
 import NavBar from './components/navBar';
 import { FaCartPlus } from "react-icons/fa";
 import ItemCount from './components/navBar/ItemCount';
+import ItemListContainer from './components/navBar/ItemListContainer';
 
 const App = () => {
-
-  const ItemListContainer = () => {
-    return (
-      <h2>Minha lista de itens da loja!</h2>
-    );
-  };
 
   const handleAddToCart = (quantity: number) => {
     console.log('Added ${quantity} items to the cart');
