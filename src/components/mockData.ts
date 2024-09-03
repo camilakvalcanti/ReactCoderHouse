@@ -32,3 +32,13 @@ export const fetchItems = (): Promise<typeof mockItems> => {
         }, 2000);
     });
 };
+
+export const fetchItem = (id: string): Promise<typeof mockItems[number] | undefined> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const item = mockItems.find(item=> item.id ===id);
+            resolve(item);
+        }, 2000);
+    
+        });
+    };

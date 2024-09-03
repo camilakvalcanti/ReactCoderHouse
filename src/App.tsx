@@ -5,12 +5,16 @@ import NavBar from './components/navBar';
 import { FaCartPlus } from "react-icons/fa";
 import ItemCount from './components/navBar/ItemCount';
 import ItemListContainer from './components/navBar/ItemListContainer';
+import ItemDetailContainer from './components/navBar/ItemDetailContainer';
+
 
 const App = () => {
 
   const handleAddToCart = (quantity: number) => {
     console.log('Added ${quantity} items to the cart');
   }
+
+  const itemId = '1';
 
   return (
     <div>
@@ -20,6 +24,7 @@ const App = () => {
       <NavBar buttonNames='Our products'/>
       <NavBar buttonNames='Login'/>
       <ItemListContainer/>
+      <ItemDetailContainer itemId={itemId}/>
       <button type='button'>
         <FaCartPlus />
       </button>
